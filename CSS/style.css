@@ -84,3 +84,141 @@ button.white {
 }
 
 /* header section */
+
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px ;
+  height: 10vh;
+  width: 100%;
+  position: sticky;
+  background-color:rgb(218, 241, 247);
+  top:0;
+  /* position: relative ; */
+  /* margin-bottom: 20px; */
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+
+}
+nav ul li{
+  padding: 20px;
+
+}
+nav li a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3f3355;
+  position: relative;
+  
+}
+
+nav li a:hover, 
+nav li a.active {
+  color: var(--primary-color);
+}
+
+
+nav li:not(.lg-bag) a::after {
+  content: "";
+  position: absolute;
+ background-color: var(--primary-color);
+  width: 0rem;
+  height: 3px;
+  bottom: -3px;
+  right: 0px;
+  left: 0px;
+  transition: 0.3s;
+  
+}
+
+nav li:not(.lg-bag) a:hover::after, 
+nav li a.active::after{
+  transform: width 2s ease;
+  width: 3rem;
+  height: 3px;
+}
+ /* hero section  */
+
+
+ .hero-section {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-image: url(../img/img1.jpg);
+  background-size: cover;
+  /* background-position: center; */
+ 
+  
+ }
+ .hero-section img{
+  height: 95vh;
+  width: 100vw;
+  position: absolute;
+ }
+
+.info-script{
+  position: absolute;
+  transform: translateX(-100%);
+  top: 40%;
+  z-index: 1;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+
+}
+
+.info-script h1{
+  color: var(--primary-color);
+
+}
+.info-script button{
+  background: url(../img/button.png);
+  background-color: transparent;
+  border: 0px;
+  padding: 14px 80px 14px 70px;
+  color: var(--primary-color);
+}
+
+/* :future section */
+
+.futuer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+
+}
+
+.futuer-section .f-box{
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid rgba(156, 204, 202, 0.212);
+  border-radius: 10px;
+  box-shadow: 20px 20px 15px rgba(0,0,0,0.04);
+transition: all 0.1s linear;
+cursor: pointer;
+}
+.futuer-section .f-box:hover {
+  border: 1px solid rgba(76, 189, 185, 0.418);
+  box-shadow: 15px 15px 30px rgba(129, 119, 216, 0.08);
+}
+.f-box h6{
+  text-align: center;
+  padding: 2px 1px 1px;
+  border: 3rem;
+  border-radius: 1px;
+  margin-top: 1.5rem;
+  background-color: rgba(255, 0, 255, 0.404);
+}
